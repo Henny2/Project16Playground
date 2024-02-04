@@ -16,6 +16,8 @@
 		40E6355B2B6DE9FB009CEC19 /* ContextMenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6355A2B6DE9FB009CEC19 /* ContextMenusView.swift */; };
 		40E6355D2B6F1FF6009CEC19 /* ListRowButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6355C2B6F1FF6009CEC19 /* ListRowButtonsView.swift */; };
 		40E6355F2B6F2336009CEC19 /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6355E2B6F2336009CEC19 /* LocalNotificationsView.swift */; };
+		40E635612B6F2A91009CEC19 /* DependenciesPackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E635602B6F2A91009CEC19 /* DependenciesPackagesView.swift */; };
+		40E635642B6F2B44009CEC19 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 40E635632B6F2B44009CEC19 /* SamplePackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,7 @@
 		40E6355A2B6DE9FB009CEC19 /* ContextMenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenusView.swift; sourceTree = "<group>"; };
 		40E6355C2B6F1FF6009CEC19 /* ListRowButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowButtonsView.swift; sourceTree = "<group>"; };
 		40E6355E2B6F2336009CEC19 /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
+		40E635602B6F2A91009CEC19 /* DependenciesPackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesPackagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E635642B6F2B44009CEC19 /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 				40E6355A2B6DE9FB009CEC19 /* ContextMenusView.swift */,
 				40E6355C2B6F1FF6009CEC19 /* ListRowButtonsView.swift */,
 				40E6355E2B6F2336009CEC19 /* LocalNotificationsView.swift */,
+				40E635602B6F2A91009CEC19 /* DependenciesPackagesView.swift */,
 			);
 			path = Project16Playground;
 			sourceTree = "<group>";
@@ -98,6 +103,9 @@
 			dependencies = (
 			);
 			name = Project16Playground;
+			packageProductDependencies = (
+				40E635632B6F2B44009CEC19 /* SamplePackage */,
+			);
 			productName = Project16Playground;
 			productReference = 4002BA3B2B6B48C200FE39B9 /* Project16Playground.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 4002BA322B6B48C200FE39B9;
+			packageReferences = (
+				40E635622B6F2B44009CEC19 /* XCRemoteSwiftPackageReference "samplepackage" */,
+			);
 			productRefGroup = 4002BA3C2B6B48C200FE39B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +165,7 @@
 			files = (
 				4002BA412B6B48C200FE39B9 /* ContentView.swift in Sources */,
 				40E6355B2B6DE9FB009CEC19 /* ContextMenusView.swift in Sources */,
+				40E635612B6F2A91009CEC19 /* DependenciesPackagesView.swift in Sources */,
 				40E635592B6DE73F009CEC19 /* ImageInterpolationView.swift in Sources */,
 				4002BA3F2B6B48C200FE39B9 /* Project16PlaygroundApp.swift in Sources */,
 				40E635572B6C917E009CEC19 /* ResultTypeView.swift in Sources */,
@@ -362,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40E635622B6F2B44009CEC19 /* XCRemoteSwiftPackageReference "samplepackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/samplepackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40E635632B6F2B44009CEC19 /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40E635622B6F2B44009CEC19 /* XCRemoteSwiftPackageReference "samplepackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4002BA332B6B48C200FE39B9 /* Project object */;
 }
